@@ -127,7 +127,21 @@ export default function Estimator() {
       try {
         const logo = new Image();
         logo.src = "/company-logo.png";
-        doc.addImage(logo, "PNG", pageWidth / 2 - 30, headerY - 8, 15, 8);
+
+        const imgProps = doc.getImageProperties(logo);
+
+        // choose ONE dimension only
+        const logoWidth = 15; // adjust this if needed
+        const logoHeight = (imgProps.height * logoWidth) / imgProps.width;
+
+        doc.addImage(
+          logo,
+          imgProps.fileType,
+          pageWidth / 2 - logoWidth - 15, // left of text
+          headerY - logoHeight + 2,
+          logoWidth,
+          logoHeight
+        );
       } catch (e) {}
 
       // Company name
