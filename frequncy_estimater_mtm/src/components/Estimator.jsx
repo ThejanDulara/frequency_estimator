@@ -132,7 +132,7 @@ export default function Estimator() {
 
       // Company name
       doc.text(
-        "Thirdshift Media Pvt Ltd",
+        "MTM Group",
         pageWidth / 2 - 15,
         headerY,
         { align: "left" }
@@ -151,7 +151,7 @@ export default function Estimator() {
       doc.setFontSize(9);
       doc.setTextColor(160, 174, 192);
       doc.text(
-        "© " + new Date().getFullYear() + " Thirdshift Media Pvt Ltd. All rights reserved.",
+        "© " + new Date().getFullYear() + " MTM Group. All rights reserved.",
         pageWidth / 2,
         pageHeight - 10,
         { align: "center" }
