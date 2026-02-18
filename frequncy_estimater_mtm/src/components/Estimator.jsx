@@ -137,8 +137,8 @@ export default function Estimator() {
         doc.addImage(
           logo,
           imgProps.fileType,
-          pageWidth / 2 - logoWidth - 15, // left of text
-          headerY - logoHeight + 2,
+          pageWidth / 2 - logoWidth - 20, // left of text
+          headerY - logoHeight + 1,
           logoWidth,
           logoHeight
         );
@@ -146,7 +146,7 @@ export default function Estimator() {
 
       // Company name
       doc.text(
-        "MTM Group",
+        "Media Factory (PVT) LTD",
         pageWidth / 2 - 15,
         headerY,
         { align: "left" }
@@ -165,7 +165,7 @@ export default function Estimator() {
       doc.setFontSize(9);
       doc.setTextColor(160, 174, 192);
       doc.text(
-        "© " + new Date().getFullYear() + " MTM Group. All rights reserved.",
+        "© " + new Date().getFullYear() + " Media Factory (PVT) LTD. All rights reserved.",
         pageWidth / 2,
         pageHeight - 10,
         { align: "center" }
